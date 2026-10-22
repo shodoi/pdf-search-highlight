@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "PDF Search Highlight",
+  "version": "0.1.0",
+  "description": "Web 上の PDF を pdf.js ビューアで開き、検索ヒットを蛍光イエロー + 赤枠(点滅)で強調します。",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["pdfjs/web/viewer.html"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

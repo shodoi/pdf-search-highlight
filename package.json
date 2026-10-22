@@ -1,0 +1,11 @@
+{
+  "name": "pdf-search-highlight",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "patch": "node scripts/patch-pdfjs.mjs",
+    "test": "node --test \"test/unit/*.test.mjs\"",
+    "test:e2e": "node --test \"test/e2e/*.test.mjs\""
+  }
+}
